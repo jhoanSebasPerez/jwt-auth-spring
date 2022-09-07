@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppController {
 
-    @GetMapping("/")
+    @GetMapping("/welcome")
     public String index(){
         return "Welcome to Spring app";
     }

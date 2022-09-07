@@ -47,7 +47,7 @@ public class ApplicationSecurity {
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/auth/**", "/docs/**", "/users").permitAll()
+                .antMatchers("/auth/**", "/docs/**", "/users", "/welcome").permitAll()
                 //.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
                 .anyRequest().authenticated()
                 .and()
